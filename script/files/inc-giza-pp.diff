@@ -1,0 +1,20 @@
+diff -crN inc-giza-pp/mkcls-v2/myleda.h inc-giza-pp.fixed/mkcls-v2/myleda.h
+*** inc-giza-pp/mkcls-v2/myleda.h	2015-05-08 17:01:52.247213836 +0900
+--- inc-giza-pp.fixed/mkcls-v2/myleda.h	2015-05-08 17:06:20.078970259 +0900
+***************
+*** 177,183 ****
+        typename MY_HASH_BASE::iterator pos=this->find(a);
+        if( pos==this->end() )
+  	{
+! 	  insert(typename MY_HASH_BASE::value_type(a,init));
+  	  pos=this->find(a);
+  	  iassert(pos!=this->end());
+  	}
+--- 177,183 ----
+        typename MY_HASH_BASE::iterator pos=this->find(a);
+        if( pos==this->end() )
+  	{
+! 	  this->insert(typename MY_HASH_BASE::value_type(a,init));
+  	  pos=this->find(a);
+  	  iassert(pos!=this->end());
+  	}
